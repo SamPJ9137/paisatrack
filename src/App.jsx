@@ -76,61 +76,22 @@ const MORE_ITEMS = [
 
 // ─── Seed Data ────────────────────────────────────────────────────────────────
 const INIT_ACCOUNTS = [
-  { id: "SBI",   name: "SBI",   fullName: "State Bank of India",  balance: 12450 },
-  { id: "HDFC",  name: "HDFC",  fullName: "HDFC Bank",            balance: 89200 },
-  { id: "KOTAK", name: "KOTAK", fullName: "Kotak Mahindra Bank",  balance: 34800 },
+  { id: "SBI",   name: "SBI",   fullName: "State Bank of India",  balance: 0 },
+  { id: "HDFC",  name: "HDFC",  fullName: "HDFC Bank",            balance: 0 },
+  { id: "KOTAK", name: "KOTAK", fullName: "Kotak Mahindra Bank",  balance: 0 },
 ];
 
-const INIT_ACC_TX = [
-  { id: 1, accountId: "SBI",   type: "income",   title: "Salary Credit",     amount: 55000, date: "2026-05-01", note: "May salary" },
-  { id: 2, accountId: "KOTAK", type: "income",   title: "Salary Transfer",   amount: 25000, date: "2026-05-01", note: "Monthly budget" },
-  { id: 3, accountId: "HDFC",  type: "income",   title: "Freelance Payment", amount: 15000, date: "2026-04-28", note: "" },
-  { id: 4, accountId: "SBI",   type: "transfer", title: "Transfer to HDFC",  amount: 20000, date: "2026-04-30", note: "" },
-  { id: 5, accountId: "HDFC",  type: "transfer", title: "Transfer from SBI", amount: 20000, date: "2026-04-30", note: "" },
-];
+const INIT_ACC_TX = [];
 
-const INIT_EXPENSES = [
-  { id: 1,  title: "Mess Lunch",        category: "mess",          amount: 80,    accountId: "SBI",   paymentMode: "Cash", date: "2026-05-03", note: "", tags: [], photo: null },
-  { id: 2,  title: "Metro Card",        category: "metro",         amount: 500,   accountId: "SBI",   paymentMode: "UPI",  date: "2026-05-02", note: "", tags: [], photo: null },
-  { id: 3,  title: "Zomato Dinner",     category: "zomato",        amount: 280,   accountId: "SBI",   paymentMode: "UPI",  date: "2026-05-02", note: "Biryani", tags: ["dinner"], photo: null },
-  { id: 4,  title: "Morning Tea",       category: "tea",           amount: 30,    accountId: "KOTAK", paymentMode: "Cash", date: "2026-05-01", note: "", tags: [], photo: null },
-  { id: 5,  title: "Grocery Run",       category: "grocery_solo",  amount: 650,   accountId: "SBI",   paymentMode: "UPI",  date: "2026-05-01", note: "", tags: [], photo: null },
-  { id: 6,  title: "Home Loan EMI",     category: "home_emi",      amount: 14000, accountId: "KOTAK", paymentMode: "UPI",  date: "2026-04-05", note: "", tags: [], photo: null },
-  { id: 7,  title: "Education EMI",     category: "edu_emi",       amount: 6500,  accountId: "KOTAK", paymentMode: "UPI",  date: "2026-04-10", note: "", tags: [], photo: null },
-  { id: 8,  title: "Restaurant Dinner", category: "restaurant",    amount: 750,   accountId: "HDFC",  paymentMode: "Card", date: "2026-04-28", note: "With friends", tags: ["social"], photo: null },
-  { id: 9,  title: "Fuel",              category: "fuel",          amount: 300,   accountId: "SBI",   paymentMode: "UPI",  date: "2026-04-25", note: "", tags: [], photo: null },
-  { id: 10, title: "Movie Tickets",     category: "entertainment", amount: 400,   accountId: "HDFC",  paymentMode: "Card", date: "2026-04-20", note: "", tags: [], photo: null },
-];
+const INIT_EXPENSES = [];
 
-const INIT_PEOPLE = [
-  { id: 1, name: "Rahul" },
-  { id: 2, name: "Priya" },
-  { id: 3, name: "Amit"  },
-];
+const INIT_PEOPLE = [];
 
-const INIT_LENDING = [
-  { id: 1, personId: 1, type: "gave",     amount: 1500, date: "2026-04-20", note: "Lunch split",    dueDate: "2026-05-15", settled: false, settlementNote: "" },
-  { id: 2, personId: 1, type: "received", amount: 500,  date: "2026-04-28", note: "Partial return",  dueDate: null,         settled: false, settlementNote: "" },
-  { id: 3, personId: 2, type: "gave",     amount: 800,  date: "2026-05-01", note: "Train ticket",   dueDate: "2026-05-20", settled: false, settlementNote: "" },
-  { id: 4, personId: 2, type: "received", amount: 800,  date: "2026-05-03", note: "Paid back",       dueDate: null,         settled: true,  settlementNote: "Paid via GPay" },
-  { id: 5, personId: 3, type: "gave",     amount: 2000, date: "2026-04-15", note: "Emergency cash", dueDate: "2026-05-10", settled: false, settlementNote: "" },
-];
+const INIT_LENDING = [];
 
-const INIT_RECURRING = [
-  { id: 1, title: "Rent",           category: "rent",     amount: 8000,  accountId: "SBI",   paymentMode: "UPI",  dayOfMonth: 1,  note: "", active: true  },
-  { id: 2, title: "Home Loan EMI",  category: "home_emi", amount: 14000, accountId: "KOTAK", paymentMode: "UPI",  dayOfMonth: 5,  note: "", active: true  },
-  { id: 3, title: "Education EMI",  category: "edu_emi",  amount: 6500,  accountId: "KOTAK", paymentMode: "UPI",  dayOfMonth: 10, note: "", active: true  },
-  { id: 4, title: "Netflix",        category: "entertainment", amount: 649,  accountId: "HDFC",  paymentMode: "Card", dayOfMonth: 15, note: "Monthly subscription", active: true  },
-  { id: 5, title: "Mobile Recharge",category: "mobile",   amount: 299,   accountId: "SBI",   paymentMode: "UPI",  dayOfMonth: 20, note: "", active: false },
-];
+const INIT_RECURRING = [];
 
-const INIT_BUDGETS = [
-  { id: 1, category: "zomato",       limit: 2000 },
-  { id: 2, category: "restaurant",   limit: 3000 },
-  { id: 3, category: "entertainment",limit: 2000 },
-  { id: 4, category: "grocery_solo", limit: 5000 },
-  { id: 5, category: "tea",          limit: 500  },
-];
+const INIT_BUDGETS = [];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 const fmt    = n  => "₹" + Math.abs(n).toLocaleString("en-IN");
@@ -2653,20 +2614,47 @@ function MoreScreen({ onNavigate, pin }) {
 
 // ─── Root App ─────────────────────────────────────────────────────────────────
 export default function App() {
-  const [active,        setActive]        = useState("dashboard");
-  const [accounts,      setAccounts]      = useState(INIT_ACCOUNTS);
-  const [accTx,         setAccTx]         = useState(INIT_ACC_TX);
-  const [expenses,      setExpenses]      = useState(INIT_EXPENSES);
-  const [accountDetail, setAccountDetail] = useState(null);
-  const [people,        setPeople]        = useState(INIT_PEOPLE);
-  const [lending,       setLending]       = useState(INIT_LENDING);
-  const [lendingDetail, setLendingDetail] = useState(null);
-  const [subScreen,     setSubScreen]     = useState(null);
-  const [recurring,     setRecurring]     = useState(INIT_RECURRING);
-  const [budgets,       setBudgets]       = useState(INIT_BUDGETS);
-  const [pin,           setPin]           = useState(null);
-  const [locked,        setLocked]        = useState(false);
-  const [customCats,    setCustomCats]    = useState([]);
+  const savedData = JSON.parse(localStorage.getItem("paisatrack-data") || "{}");
+
+const [active, setActive] = useState("dashboard");
+const [accounts, setAccounts] = useState(savedData.accounts || INIT_ACCOUNTS);
+const [accTx, setAccTx] = useState(savedData.accTx || INIT_ACC_TX);
+const [expenses, setExpenses] = useState(savedData.expenses || INIT_EXPENSES);
+const [accountDetail, setAccountDetail] = useState(null);
+const [people, setPeople] = useState(savedData.people || INIT_PEOPLE);
+const [lending, setLending] = useState(savedData.lending || INIT_LENDING);
+const [lendingDetail, setLendingDetail] = useState(null);
+const [subScreen, setSubScreen] = useState(null);
+const [recurring, setRecurring] = useState(savedData.recurring || INIT_RECURRING);
+const [budgets, setBudgets] = useState(savedData.budgets || INIT_BUDGETS);
+const [pin, setPin] = useState(null);
+const [locked, setLocked] = useState(false);
+const [customCats, setCustomCats] = useState(savedData.customCats || []);
+
+useEffect(() => {
+  localStorage.setItem(
+    "paisatrack-data",
+    JSON.stringify({
+      accounts,
+      accTx,
+      expenses,
+      people,
+      lending,
+      recurring,
+      budgets,
+      customCats,
+    })
+  );
+}, [
+  accounts,
+  accTx,
+  expenses,
+  people,
+  lending,
+  recurring,
+  budgets,
+  customCats,
+]);
 
   function handleTabChange(tab) { setActive(tab); setAccountDetail(null); setLendingDetail(null); setSubScreen(null); }
 
